@@ -3,6 +3,6 @@ build-*
 !build-deps
 po/*.pot
 .DS_Store
-*thumbs.db
+*humbs.db
 cache
 plugins
