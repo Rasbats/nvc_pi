@@ -32,7 +32,7 @@ SET(SRC_NVC
 ADD_LIBRARY(${PACKAGE_NAME} SHARED ${SRC_NVC})
 
 IF(WIN32)
-  SET(OPENCPN_IMPORT_LIB "C:/Projects/opencpn/build/${CMAKE_CFG_INTDIR}/opencpn.lib")
+  SET(OPENCPN_IMPORT_LIB "C:\Users\Mike\Documents\GitHub\nvc_pi\build\release/opencpn.lib")
   TARGET_LINK_LIBRARIES( ${PACKAGE_NAME} ${OPENCPN_IMPORT_LIB} )
 ENDIF(WIN32)
 

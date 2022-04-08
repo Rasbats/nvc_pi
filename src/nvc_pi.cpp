@@ -71,7 +71,7 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 //---------------------------------------------------------------------------------------------------------
 
 nvc_pi::nvc_pi(void *ppimgr)
-      :opencpn_plugin(ppimgr)
+      :opencpn_plugin_116(ppimgr)
 {
       // Create the PlugIn icons
 

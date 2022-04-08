@@ -1,0 +1,8 @@
+build
+build-*
+!build-deps
+po/*.pot
+.DS_Store
+*thumbs.db
+cache
+plugins

@@ -34,11 +34,11 @@
   #include "wx/wx.h"
 #endif //precompiled headers
 
-#define     PLUGIN_VERSION_MAJOR    1
-#define     PLUGIN_VERSION_MINOR    4
+#define     PLUGIN_VERSION_MAJOR    2
+#define     PLUGIN_VERSION_MINOR    0
 
 #define     MY_API_VERSION_MAJOR    1
-#define     MY_API_VERSION_MINOR    5
+#define     MY_API_VERSION_MINOR    16
 
 #include <ocpn_plugin.h>
 
@@ -47,7 +47,7 @@
 //    The PlugIn Class Definition
 //----------------------------------------------------------------------------------------------------------
 
-class nvc_pi : public opencpn_plugin
+class nvc_pi : public opencpn_plugin_116
 {
 public:
       nvc_pi(void *ppimgr);
