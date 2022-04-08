@@ -25,8 +25,6 @@ else ()
   message(STATUS "Configuring")
 endif ()
 
-# -------- Plugin setup ----------
-#
 include(Plugin.cmake)
 
 # -------- Setup completed, build the plugin --------
@@ -34,7 +32,7 @@ include(Plugin.cmake)
 project(${PKG_NAME} VERSION ${PKG_VERSION})
 include(PluginCompiler)
 
-add_library(${CMAKE_PROJECT_NAME} SHARED EXCLUDE_FROM_ALL ${SRC})
+add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC})
 include_directories(BEFORE ${CMAKE_BINARY_DIR}/include)
 
 add_subdirectory("libs/${PKG_API_LIB}")
@@ -62,7 +60,7 @@ file(GLOB FLATPAK_MANIFEST
   ${PROJECT_SOURCE_DIR}/flatpak/org.opencpn.OpenCPN.Plugin.*.yaml
 )
 include(Targets)
-
+create_targets(${FLATPAK_MANIFEST})
 if ("${BUILD_TYPE}" STREQUAL "")
   return ()
 endif ()
@@ -82,6 +80,11 @@ if (NOT ${BUILD_TYPE} STREQUAL "flatpak")
 
   if (COMMAND add_plugin_libraries)
     add_plugin_libraries()
+  endif ()
+
+  if (EXISTS "libs/jsoncpp" AND NOT TARGET ocpn::jsoncpp)
+    add_subdirectory("libs/jsoncpp")
+    target_link_libraries(${PACKAGE_NAME} ocpn::jsoncpp)
   endif ()
 
 endif ()
