@@ -34,12 +34,6 @@
   #include "wx/wx.h"
 #endif //precompiled headers
 
-#define     PLUGIN_VERSION_MAJOR    2
-#define     PLUGIN_VERSION_MINOR    0
-
-#define     MY_API_VERSION_MAJOR    1
-#define     MY_API_VERSION_MINOR    16
-
 #include <ocpn_plugin.h>
 #include "config.h"
 
