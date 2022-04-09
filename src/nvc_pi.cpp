@@ -151,7 +151,7 @@ wxBitmap *nvc_pi::GetPlugInBitmap()
 
 wxString nvc_pi::GetCommonName()
 {
-      return _("NV Charts");
+      return _("NVCharts");
 }
 
 

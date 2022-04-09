@@ -35,11 +35,13 @@ set(PKG_NAME nvc_pi)
 set(PKG_VERSION  3.0.0)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
-set(DISPLAY_NAME NVC)    # Dialogs, installer artifacts, ...
-set(PLUGIN_API_NAME nvc) # As of GetCommonName() in plugin API
-set(PKG_SUMMARY "Using NV Charts")
+set(DISPLAY_NAME NVCharts)    # Dialogs, installer artifacts, ...
+set(PLUGIN_API_NAME NVCharts) # As of GetCommonName() in plugin API
+set(PKG_SUMMARY "NV Charts for OpenCPN")
 set(PKG_DESCRIPTION [=[
-NV Charts
+Provides support of nv-charts raster navigation charts.\n\n\
+Supported charts must have been installed with \n\
+appropriate decryption dll(s) available.\n\
 ]=])
 
 set(PKG_AUTHOR "Mike Rossiter")
