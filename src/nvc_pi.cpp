@@ -63,6 +63,28 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 
 #include "default_pi.xpm"
 
+static wxBitmap load_plugin(const char* icon_name, const char* api_name) {
+    wxBitmap bitmap; 
+    wxFileName fn;
+    auto path = GetPluginDataDir(api_name);
+    fn.SetPath(path);
+    fn.AppendDir("data");
+    fn.SetName(icon_name);
+
+    wxLogDebug("Loading png icon");
+    fn.SetExt("png");
+    path = fn.GetFullPath();
+    if (!wxImage::CanRead(path)) {
+        wxLogDebug("Initiating image handlers.");
+        wxInitAllImageHandlers();
+    }
+    wxImage panelIcon(path);
+    bitmap = wxBitmap(panelIcon);
+    wxLogDebug("Icon loaded, result: %s", bitmap.IsOk() ? "ok" : "fail");
+    return bitmap;
+}
+
+
 
 //---------------------------------------------------------------------------------------------------------
 //
@@ -74,8 +96,8 @@ nvc_pi::nvc_pi(void *ppimgr)
       :opencpn_plugin_116(ppimgr)
 {
       // Create the PlugIn icons
-
-      m_pplugin_icon = new wxBitmap(default_pi);
+	  m_panelBitmap = load_plugin("nv_panel_icon", "nvc");
+      m_pplugin_icon = new wxBitmap(m_panelBitmap);
 }
 
 nvc_pi::~nvc_pi()
