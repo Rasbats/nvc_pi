@@ -39,8 +39,8 @@ set(DISPLAY_NAME NVCharts)    # Dialogs, installer artifacts, ...
 set(PLUGIN_API_NAME NVCharts) # As of GetCommonName() in plugin API
 set(PKG_SUMMARY "NV Charts for OpenCPN")
 set(PKG_DESCRIPTION [=[
-Provides support of nv-charts raster navigation charts.\n\n\
-Supported charts must have been installed with \n\
+Provides support for NV Charts raster navigation charts.\n\n\
+Supported charts must have been installed with the\n\
 appropriate decryption dll(s) available.\n\
 ]=])
 

@@ -164,7 +164,7 @@ wxString nvc_pi::GetShortDescription()
 wxString nvc_pi::GetLongDescription()
 {
       return _("NVC PlugIn for OpenCPN\n\
-Provides support of nv-charts raster navigation charts.\n\n\
+Provides support for NV Charts raster navigation charts.\n\n\
 Supported charts must have been installed with \n\
 appropriate decryption dll(s) available.\n\
 ");
