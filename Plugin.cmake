@@ -16,16 +16,16 @@ set(OCPN_TEST_REPO
     "mike-rossiter/nvc-alpha"
     CACHE STRING "Default repository for untagged builds"
 )
-set(OCPN_BETA_REPO
-    "mike-rossiter/nvc-beta"
-    CACHE STRING
-    "Default repository for tagged builds matching 'beta'"
-)
-set(OCPN_RELEASE_REPO
-    "mike-rossiter/nvc-prod"
-    CACHE STRING
-    "Default repository for tagged builds not matching 'beta'"
-)
+#set(OCPN_BETA_REPO
+#    "opencpn/shipdriver-beta"
+#    CACHE STRING
+#    "Default repository for tagged builds matching 'beta'"
+#)
+#set(OCPN_RELEASE_REPO
+ #   "opencpn/shipdriver-prod"
+ #   CACHE STRING
+#    "Default repository for tagged builds not matching 'beta'"
+#)
 
 #
 #
@@ -35,13 +35,11 @@ set(PKG_NAME nvc_pi)
 set(PKG_VERSION  3.0.0)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
-set(DISPLAY_NAME NVCharts)    # Dialogs, installer artifacts, ...
-set(PLUGIN_API_NAME NVCharts) # As of GetCommonName() in plugin API
-set(PKG_SUMMARY "NV Charts for OpenCPN")
+set(DISPLAY_NAME NVC)    # Dialogs, installer artifacts, ...
+set(PLUGIN_API_NAME nvc) # As of GetCommonName() in plugin API
+set(PKG_SUMMARY "Using NV Charts")
 set(PKG_DESCRIPTION [=[
-Provides support for NV Charts raster navigation charts.
-Supported charts must have been installed with the
-appropriate decryption dll(s) available.
+NV Charts
 ]=])
 
 set(PKG_AUTHOR "Mike Rossiter")

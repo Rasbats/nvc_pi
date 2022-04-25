@@ -34,7 +34,6 @@
   #include "wx/wx.h"
 #endif //precompiled headers
 
-#include <wx/fileconf.h>
 #include <ocpn_plugin.h>
 #include "config.h"
 
@@ -65,8 +64,6 @@ public:
       wxArrayString GetDynamicChartClassNameArray();
 
       wxArrayString     m_class_name_array;
-
-	  wxBitmap m_panelBitmap;
 
 private:
 

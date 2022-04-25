@@ -63,28 +63,6 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 
 #include "default_pi.xpm"
 
-static wxBitmap load_plugin(const char* icon_name, const char* api_name) {
-    wxBitmap bitmap; 
-    wxFileName fn;
-    auto path = GetPluginDataDir(api_name);
-    fn.SetPath(path);
-    fn.AppendDir("data");
-    fn.SetName(icon_name);
-
-    wxLogDebug("Loading png icon");
-    fn.SetExt("png");
-    path = fn.GetFullPath();
-    if (!wxImage::CanRead(path)) {
-        wxLogDebug("Initiating image handlers.");
-        wxInitAllImageHandlers();
-    }
-    wxImage panelIcon(path);
-    bitmap = wxBitmap(panelIcon);
-    wxLogMessage("Icon loaded, result: %s", bitmap.IsOk() ? "ok" : "fail");
-    return bitmap;
-}
-
-
 
 //---------------------------------------------------------------------------------------------------------
 //
@@ -96,8 +74,8 @@ nvc_pi::nvc_pi(void *ppimgr)
       :opencpn_plugin_116(ppimgr)
 {
       // Create the PlugIn icons
-	  m_panelBitmap = load_plugin("nv_panel_icon", "nvc_pi");
-      m_pplugin_icon = new wxBitmap(m_panelBitmap);
+
+      m_pplugin_icon = new wxBitmap(default_pi);
 }
 
 nvc_pi::~nvc_pi()
@@ -146,25 +124,25 @@ int nvc_pi::GetPlugInVersionMinor()
 
 wxBitmap *nvc_pi::GetPlugInBitmap()
 {
-      { return &m_panelBitmap; }
+      return m_pplugin_icon;
 }
 
 wxString nvc_pi::GetCommonName()
 {
-      return _("NVCharts");
+      return _("NVC");
 }
 
 
 wxString nvc_pi::GetShortDescription()
 {
-      return _("NV Charts PlugIn for OpenCPN");
+      return _("nv-charts PlugIn for OpenCPN");
 }
 
 
 wxString nvc_pi::GetLongDescription()
 {
       return _("NVC PlugIn for OpenCPN\n\
-Provides support for NV Charts raster navigation charts.\n\n\
+Provides support of nv-charts raster navigation charts.\n\n\
 Supported charts must have been installed with \n\
 appropriate decryption dll(s) available.\n\
 ");
