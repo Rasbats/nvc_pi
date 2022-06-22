@@ -100,7 +100,7 @@ nvc_pi::nvc_pi(void *ppimgr)
 
 nvc_pi::~nvc_pi()
 {
-      delete &m_pplugin_icon;
+     
 }
 
 int nvc_pi::Init(void)
