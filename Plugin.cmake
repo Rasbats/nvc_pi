@@ -43,6 +43,9 @@ NV Charts
 ]=])
 
 set(PKG_AUTHOR "Mike Rossiter")
+#
+# Fork of https://github.com/bdbcat/nvc_pi
+#
 set(PKG_IS_OPEN_SOURCE "yes")
 set(PKG_HOMEPAGE https://github.com/Rasbats/nvc_pi)
 set(PKG_INFO_URL https://opencpn.org/OpenCPN/plugins/nvc.html)
