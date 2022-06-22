@@ -13,19 +13,19 @@
 # -------- Options ----------
 
 set(OCPN_TEST_REPO
-    "mike-rossiter/nvc-alpha"
+    "opencpn/nvc-alpha"
     CACHE STRING "Default repository for untagged builds"
 )
-#set(OCPN_BETA_REPO
-#    "opencpn/shipdriver-beta"
-#    CACHE STRING
-#    "Default repository for tagged builds matching 'beta'"
-#)
-#set(OCPN_RELEASE_REPO
- #   "opencpn/shipdriver-prod"
- #   CACHE STRING
-#    "Default repository for tagged builds not matching 'beta'"
-#)
+set(OCPN_BETA_REPO
+    "opencpn/nvc-beta"
+    CACHE STRING
+    "Default repository for tagged builds matching 'beta'"
+)
+set(OCPN_RELEASE_REPO
+   "opencpn/nvc-prod"
+   CACHE STRING
+    "Default repository for tagged builds not matching 'beta'"
+)
 
 #
 #
