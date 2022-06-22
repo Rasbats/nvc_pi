@@ -1,19 +1,15 @@
 == NV Charts
 
-* This plugin on works for Windows. Nv Charts for all platforms is
-available through the Fugawi plugin.
-* On your PC, the download and installation plugin can be made ​​before
+* This plugin only works for Windows. 
+
+* On your PC, the installation of the plugin can be made ​​before
 or after the installation of the charts.
 
 === Links
 
-Source: https://github.com/bdbcat/nvc_pi[Github Repository NVC_pi] +
-Download: https://opencpn.org/OpenCPN/plugins/nvcharts.html[NVC_pi
-Download] +
-Forum:http://www.cruisersforum.com/forums/f134/nv-charts-182131.html[NVcharts
-Forum] +
-Website: http://fr.nvcharts.com/?redirect=no[NV_Verlag] or through
-Fugawi website +
+Source: https://github.com/Rasbats/nvc_pi[Github Repository NVC_pi] +
+Forum: http://www.cruisersforum.com/forums/f134/nv-charts-182131.html[NV charts Forum] +
+Website: http://fr.nvcharts.com/?redirect=no[NV_Verlag]
 
 === Get charts from NV-Verlag:
 
@@ -21,12 +17,12 @@ The NVC charts are purchased only from the German publisher NV Verlag.
 
 * On this website: *http://fr.nvcharts.com/?redirect=no[NV_Verlag]* +
 
-image::nv_verlag_web_site.jpeg[]
+image:nv_verlag_web_site.jpeg[]
 
 * This website is multilingual. See at the top right on the homepage of
 the site the icons to change the language.
 
-*The charts in this editor ribs cover the following:*
+*The charts from this editor covers the following:*
 
 [cols=",",]
 |===
@@ -92,65 +88,25 @@ installing.
 * Follow the instructions that appear on the screen knowing that
 sometimes to be patient.
 
-==== Download and install the plugin:
-
-The latest version is available here:
-
-*_http://www.opencpn.org/OpenCPN/plugins/nvcharts.html[Download
-Plugin]_*
-
-* Save the file to your PC.
-
-image::telechargement_nvc_pi-1.4-win32.jpeg[]
+==== Install the plugin:
 
 * This plug-in only works with windows
 ** XP SP3/Vista/7/8.1/10
 
-* After downloading the file, depending on the settings selected on your
-PC, click or double click it.
-* For installation steps. Allow the installation to do. +
+Update the master catalog (Options->Plugins->Update Plugin Catalog: master)
 
-image::installation_de_nvc_pi_1.jpeg[]
+In the list of available plugins select "NVCharts". Press the 'install' button. 
 
-image::installation_de_nvc_pi_2.jpeg[]
+==== Enable the plugin:
 
-image::installation_de_nvc_pi_3.jpeg[]
+From the installed list enable the plugin using the checkbox.
 
-image::installation_de_nvc_pi_4.jpeg[]
-
-The installation will be done automatically in the “plugins” folder of
-the installation OpenCPN.
-
-* Nota Bene :
-** Once the installation done, the executable file which was used to
-carry, can be deleted from the PC.
-
-==== Activation / De-activation of the plugin:
-
-* After installing OpenCPN the icon bar at the top of the screen, has no
+* After installing OpenCPN the icon bar has no
 additional icon.
 ** Lack of visual information makes it impossible to know whether the
-plug-in “NVC-Chart” is on.
+plug-in “NVC-Chart” is on. 
 
-*_Activation :_*
-
-image::activation_nvc-charts.jpeg[]
-
-* Commissioning Tool “NVC-Chart”:
-** Go to the “Toolbox”, “Plugins” tab,
-** Click the “NVC-Chart” icon,
-** Click the “Activate” button,
-** Confirm with “Ok” or “Apply”.
-
-*_Deactivate:_* 
-
-image::des-activation_nvc-charts.jpeg[]
-
-Go to the “Toolbox”, “PluginsIns” tab,
-
-* Click the “NVC-Chart” icon,
-* Click the “De-activate” button,
-* Confirm with “Ok” or “Apply”.
+Use Options->Plugins to see whether NVCharts is enabled.
 
 === Manual:
 
