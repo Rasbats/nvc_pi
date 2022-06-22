@@ -38,6 +38,26 @@
 #include "nvc_pi.h"
 #include "chart.h"
 
+static wxBitmap load_plugin(const char* icon_name, const char* api_name) {
+    wxBitmap bitmap; 
+    wxFileName fn;
+    auto path = GetPluginDataDir(api_name);
+    fn.SetPath(path);
+    fn.AppendDir("data");
+    fn.SetName(icon_name);
+    wxLogDebug("Loading png icon");
+    fn.SetExt("png");
+    path = fn.GetFullPath();
+    if (!wxImage::CanRead(path)) {
+        wxLogDebug("Initiating image handlers.");
+        wxInitAllImageHandlers();
+    }
+    wxImage panelIcon(path);
+    bitmap = wxBitmap(panelIcon);
+
+    wxLogDebug("Icon loaded, result: %s", bitmap.IsOk() ? "ok" : "fail");
+    return bitmap;
+}
 
 // the class factories, used to create and destroy instances of the PlugIn
 
@@ -75,12 +95,12 @@ nvc_pi::nvc_pi(void *ppimgr)
 {
       // Create the PlugIn icons
 
-      m_pplugin_icon = new wxBitmap(default_pi);
+      m_pplugin_icon = load_plugin("nv_panel_icon", "nvc_pi");
 }
 
 nvc_pi::~nvc_pi()
 {
-      delete m_pplugin_icon;
+      delete &m_pplugin_icon;
 }
 
 int nvc_pi::Init(void)
@@ -124,24 +144,24 @@ int nvc_pi::GetPlugInVersionMinor()
 
 wxBitmap *nvc_pi::GetPlugInBitmap()
 {
-      return m_pplugin_icon;
+      return &m_pplugin_icon;
 }
 
 wxString nvc_pi::GetCommonName()
 {
-      return _("NVC");
+      return _("NVCharts");
 }
 
 
 wxString nvc_pi::GetShortDescription()
 {
-      return _("nv-charts PlugIn for OpenCPN");
+      return _("NVCharts PlugIn for OpenCPN");
 }
 
 
 wxString nvc_pi::GetLongDescription()
 {
-      return _("NVC PlugIn for OpenCPN\n\
+      return _("NVCharts PlugIn for OpenCPN\n\
 Provides support of nv-charts raster navigation charts.\n\n\
 Supported charts must have been installed with \n\
 appropriate decryption dll(s) available.\n\

@@ -36,6 +36,7 @@
 
 #include <ocpn_plugin.h>
 #include "config.h"
+#include <wx/fileconf.h>
 
 
 //----------------------------------------------------------------------------------------------------------
@@ -67,7 +68,7 @@ public:
 
 private:
 
-      wxBitmap          *m_pplugin_icon;
+      wxBitmap          m_pplugin_icon;
 };
 
 
