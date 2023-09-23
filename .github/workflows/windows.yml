@@ -5,14 +5,14 @@ name: Windows 32bit build
 on:
   push:
     branches:
-      - main
+      - o58
     paths-ignore:
       - 'manual/**'
     tags:
       - '*'
   pull_request:
     branches:
-      - main
+      - o58
     paths-ignore:
       - 'manual/**'
 
