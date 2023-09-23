@@ -13,26 +13,23 @@
 # -------- Options ----------
 
 set(OCPN_TEST_REPO
-    "opencpn/nvc-alpha"
-    CACHE STRING "Default repository for untagged builds"
-)
+    "nohal/opencpn-plugins"
+    CACHE STRING "Default repository for untagged builds")
 set(OCPN_BETA_REPO
-    "opencpn/nvc-beta"
-    CACHE STRING
-    "Default repository for tagged builds matching 'beta'"
-)
+    "nohal/nvc_pi-beta"
+    CACHE STRING "Default repository for tagged builds matching 'beta'")
 set(OCPN_RELEASE_REPO
-   "opencpn/nvc-prod"
-   CACHE STRING
-    "Default repository for tagged builds not matching 'beta'"
-)
+    "nohal/nvc_pi-stable"
+    CACHE STRING "Default repository for tagged builds not matching 'beta'")
+
+
 
 #
 #
 # -------  Plugin setup --------
 #
 set(PKG_NAME nvc_pi)
-set(PKG_VERSION  3.0.0)
+set(PKG_VERSION  3.1.0)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
 set(DISPLAY_NAME NVCharts)    # Dialogs, installer artifacts, ...
@@ -42,7 +39,7 @@ set(PKG_DESCRIPTION [=[
 NV Charts
 ]=])
 
-set(PKG_AUTHOR "Mike Rossiter")
+set(PKG_AUTHOR "Pavel Kalian, Mike Rossiter")
 #
 # Fork of https://github.com/bdbcat/nvc_pi
 #
